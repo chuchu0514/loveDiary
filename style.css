@@ -163,3 +163,10 @@ button {
 button:hover {
     background-color: #FF8DAA; 
 }
+
+.dailyRecord {
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
