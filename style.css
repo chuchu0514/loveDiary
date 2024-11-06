@@ -1,0 +1,165 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; 
+    display: flex;
+    flex-direction: column; 
+}
+
+/* h, a 스타일 */
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    color: #4CAF50; /* 링크 색 언더바 색도 포함 */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #FFC0CB ; 
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem; /* 제목 크기 증가 */
+    color: #fff;
+
+}
+
+/* 메인 스타일 */
+main {
+    flex: 1; /* 부모 요소의 남은 공간 다 차지 즉 헤더와 푸터를 제외한 나머지 공간을 main이 차지*/
+    padding: 2rem;
+    background-color: #f0f0f0;
+}
+
+/* 섹션 스타일 */
+section { /* 메인과 묘하게 다른색 */
+    background-color: #fff; 
+    border-radius: 10px; /* 섹션 모서리 둥글게 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* 수평 수직 흐림반경 */
+    padding: 2rem; /* 섹션 패딩 증가 */
+    margin-bottom: 2rem; /* 섹션 간 간격 증가 */
+    transition: transform 0.3s; /* 섹션 애니메이션 효과 ex)마우스 호버할 때 transform속성변경시*/
+}
+
+section:hover {
+    transform: translateY(-5px); /* 섹션 호버 시 위로 이동 */
+}
+
+footer {
+    background-color: #FFC0CB;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    bottom: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+/* 캘린더 스타일 */
+#calendar {
+    flex: 1; /*캘린더와 노트가 공평하게 넓이차지*/
+    display: flex;
+    flex-direction: column; /* 위에있음 플렉스 자식 세로로 */
+}
+
+#current-month-year:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #333;
+}
+
+#calendar-container {
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    padding: 2rem; /* 패딩 조정 */
+    box-sizing: border-box;
+    user-select: none;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;  /*화면 줄였을 때 최소 갭*/
+    user-select: none; /* 텍스트 선택 막기 */
+}
+
+#calendar-body {
+    width: 100%;
+    border-collapse: collapse; /* 테이블 선 중복 없애기 */
+}
+
+#calendar-body th, #calendar-body td {
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: all 0.3s linear; /* 상태변화시 애니메이션 */
+    padding: 10px;
+    height: 50px; /*컨텐츠의 높이만 의미함*/
+    user-select: none; /* 텍스트 선택 막기 */
+}
+
+#calendar-body td {
+    position: relative; /* 아이콘을 절대 위치로 배치하기 위해 필요 */    
+}
+
+#calendar-body td.today {
+    background-color:rgb(228, 183, 183);
+    font-weight: bold;
+    box-shadow: 0 0 0 2px #e0e8f0 inset; /* inset은 요소 내부에 */
+}   
+
+#calendar-body td.selected {
+    background-color: #FFF8B5;
+    color: white;
+    box-shadow: 0 0 0 2px #e0e8f0 inset; /* inset은 요소 내부에 */
+}
+
+#calendar-body td.today.selected {
+    background-color: #FFF8B5;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px #e0e8f0 inset; /* inset은 요소 내부에 */
+}
+
+#calendar-body td.today:hover{
+    background-color: rgb(224, 145, 145);
+}
+
+#calendar-body td.selected:hover{
+    background-color: #FFEB8A;
+ }
+ 
+ #calendar-body td:hover {
+     background-color: #c4c1c1;  
+     cursor: pointer;
+ }
+
+/* 버튼 스타일 */
+button {
+    background-color: #FFC0CB ; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF8DAA; 
+}
